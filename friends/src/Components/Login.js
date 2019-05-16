@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {login,getFriends} from "../Actions"
+import {login} from "../Actions"
 
 class Login extends React.Component{
 state={
@@ -58,5 +58,5 @@ render(){
 }
 export default connect (
     null,
-    {login,getFriends}
+    {login}
 )(Login)

@@ -11,19 +11,17 @@ class App extends React.Component {
 
     return (
       <Router>
-
-      <header>
-      <nav>
-        <Link to="/login">Login</Link>
-        <Link to="/">Ok Dont Login</Link>
-      </nav>
-      <Route path="/login" Component={Login}/>
-      <PrivateRoute path="/protected" component={FriendList}/>
-      </header>
-       
+        <div className="app">
+          <header>
+          <nav>
+            <Link to="/login">Login</Link>
+          </nav>
+          <Route path="/login" component={Login}/>
+          <PrivateRoute path="/protected" component={FriendList}/>
+          </header>
+        </div>
       </Router>
     );
-
 
   }
   

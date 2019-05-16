@@ -20,7 +20,7 @@ class FriendList extends React.Component{
         return (
             <div>
                 {this.props.friends.map(friend=>(
-                    <Friend />
+                    <Friend friend={friend}/>
                 ))}
             </div>
         )
