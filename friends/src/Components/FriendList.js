@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Friend from "./Friend";
+import {getFriends} from "../Actions"
 
 
 class FriendList extends React.Component{
@@ -11,7 +12,7 @@ class FriendList extends React.Component{
     }
 
     componentDidMout(){
-
+        this.props.getFriends();
     }
 
 
@@ -34,6 +35,6 @@ const mapStateToProps=state=>({
 export default connect(
     mapStateToProps,
     {
-        
+        getFriends
     }
 )(FriendList)
